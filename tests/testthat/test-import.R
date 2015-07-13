@@ -1,7 +1,7 @@
 context("input tests")
 
-nanfile <- system.file("data/nancycats.xlsx", package = "popprxl")
-nanxc <- system.file("data/nancycats_extra_columns.xlsx", package = "popprxl")
+nanfile <- system.file("files/nancycats.xlsx", package = "popprxl")
+nanxc <- system.file("files/nancycats_extra_columns.xlsx", package = "popprxl")
 data("nancycats", package = "adegenet")
 locNames(nancycats) <- locNames(nancycats)
 sort_alleles <- function(x) lapply(alleles(x), function(i) sort(as.numeric(i)))

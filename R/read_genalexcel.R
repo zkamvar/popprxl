@@ -15,11 +15,11 @@
 #' @seealso \code{\link[poppr]{read.genalex}}
 #' @export
 #' @examples
-#' nancy <- system.file("data/nancycats.xlsx", package = "popprxl")
+#' nancy <- system.file("files/nancycats.xlsx", package = "popprxl")
 #' nancy
 #' read.genalexcel(nancy, sheet = 1, genclone = FALSE)
 #' \dontrun{
-#' nancy_ex_cols <- system.file("data/nancycats_extra_columns.xlsx", package = "popprxl")
+#' nancy_ex_cols <- system.file("files/nancycats_extra_columns.xlsx", package = "popprxl")
 #' # This will give a warning
 #' read.genalexcel(nancy_ex_cols, sheet = 1, genclone = FALSE)
 #' }
