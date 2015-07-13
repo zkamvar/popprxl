@@ -11,15 +11,24 @@
 #' @param ... any arguments to be passed on to \code{\link[poppr]{read.genalex}}
 #' @return a \code{\link[poppr]{genclone}} or \code{\link[adegenet]{genind}}
 #'   object.
-#' @authors Zhian N. Kamvar
+#' @author Zhian N. Kamvar
 #' @seealso \code{\link[poppr]{read.genalex}}
+#' @export
 #' @examples
-#'
+#' nancy <- system.file("data/nancycats.xlsx", package = "popprxl")
+#' nancy
+#' read.genalexcel(nancy, sheet = 1, genclone = FALSE)
+#' \dontrun{
+#' nancy_ex_cols <- system.file("data/nancycats_extra_columns.xlsx", package = "popprxl")
+#' # This will give a warning
+#' read.genalexcel(nancy_ex_cols, sheet = 1, genclone = FALSE)
+#' }
 #' @importFrom poppr read.genalex
 #' @import readxl
 #' @importFrom utils write.table
 read.genalexcel <- function(x, sheet = 1, ...){
 	infile     <- file()
+	the_call   <- match.call()
 	genalex_df <- readxl::read_excel(x, sheet = sheet, col_names = FALSE)
 	nrows      <- nrow(genalex_df) - 3
 	nsamp      <- as.numeric(genalex_df[1, 2])
@@ -39,9 +48,11 @@ read.genalexcel <- function(x, sheet = 1, ...){
 			stop("Number of samples expected greater than the number of rows.")
 		}
 	}
+	# return(genalex_df)
 	utils::write.table(genalex_df, file = infile, sep = ",", quote = FALSE,
 										 row.names = FALSE, col.names = FALSE)
 	gen_object <- poppr::read.genalex(infile, sep = ",", ...)
 	close(infile)
+	gen_object@call <- the_call
 	return(gen_object)
 }
