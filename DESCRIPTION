@@ -11,7 +11,7 @@ Maintainer: Zhian N. Kamvar <kamvarz@science.oregonstate.edu>
 Encoding: UTF-8
 Description: This is a one-function package the serves as a wrapper for readxl
 	in order to read GenAlEx data directly into poppr.
-Depends: poppr (>= 2.0.0)
+Depends: poppr (>= 2.0.1)
 Imports: readxl, utils
 License: GPL-3
 LazyData: TRUE
