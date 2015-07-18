@@ -1,6 +1,7 @@
 # popprxl
 
 [![Build Status](https://travis-ci.org/zkamvar/popprxl.svg?branch=master)](https://travis-ci.org/zkamvar/popprxl)
+[![Coverage Status](https://coveralls.io/repos/zkamvar/popprxl/badge.svg?branch=master&service=github)](https://coveralls.io/github/zkamvar/popprxl?branch=master)
 
 A small package that allows import of GenAlEx data directly into poppr from excel.
 
