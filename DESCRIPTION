@@ -2,13 +2,12 @@ Package: popprxl
 Type: Package
 Title: Read GenAlEx Files Directly from Excel
 Version: 0.1
-Date: 2015-07-13
+Date: 2015-07-18
 Authors@R: c(person(c("Zhian", "N."), "Kamvar", role = c("cre", "aut"),
     email = "kamvarz@science.oregonstate.edu"))
 Maintainer: Zhian N. Kamvar <kamvarz@science.oregonstate.edu>
 Encoding: UTF-8
-Description: This is a one-function package the serves as a wrapper for readxl
-	in order to read GenAlEx data directly into poppr.
+Description: A wrapper for 'readxl' to read GenAlEx data directly into 'poppr'. 
 Depends: poppr (>= 2.0.1)
 Imports: readxl, utils
 License: GPL-3
