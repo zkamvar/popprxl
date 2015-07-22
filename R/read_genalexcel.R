@@ -15,11 +15,21 @@
 #' @seealso \code{\link[poppr]{read.genalex}}
 #' @export
 #' @examples
+#' # Read in the data set nancycats from an example excel file in this
+#' # package.
+#'
 #' nancy <- system.file("files/nancycats.xlsx", package = "popprxl")
-#' nancy
+#' nancy # This is the address to our excel file.
 #' read.genalexcel(nancy, sheet = 1, genclone = FALSE)
+#'
+#' # Note that system.file() is only for examples. You can use
+#' # file.choose() for an interactive way of choosing files.
+#' #
+#' # e.g.
+#' # myfile <- file.choose()
+#' # read.genalexcel(myfile)
 #' \dontrun{
-#' nancy_ex_cols <- system.file("files/nancycats_extra_columns.xlsx", package = "popprxl")
+#' nancy_ex_rows <- system.file("files/nancycats_extra_rows.xlsx", package = "popprxl")
 #' # This will give a warning
 #' read.genalexcel(nancy_ex_cols, sheet = 1, genclone = FALSE)
 #' }
@@ -48,9 +58,8 @@ read.genalexcel <- function(x, sheet = 1, ...){
 			stop("Number of samples expected greater than the number of rows.")
 		}
 	}
-	# return(genalex_df)
 	utils::write.table(genalex_df, file = infile, sep = ",", quote = FALSE,
-										 row.names = FALSE, col.names = FALSE)
+										 row.names = FALSE, col.names = FALSE, na = "")
 	gen_object <- poppr::read.genalex(infile, sep = ",", ...)
 	close(infile)
 	gen_object@call <- the_call
