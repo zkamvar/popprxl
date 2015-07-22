@@ -1,0 +1,11 @@
+popprxl 0.1.1
+===========
+
+BUG FIX
+
+* A bug where geographic information could not be imported was fixed. See issue #1 (https://github.com/zkamvar/popprxl/issues/1)
+
+popprxl 0.1
+===========
+
+* Initial version of popprxl
