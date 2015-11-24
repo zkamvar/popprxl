@@ -2,7 +2,7 @@ Package: popprxl
 Type: Package
 Title: Read GenAlEx Files Directly from Excel
 Version: 0.1.1
-Date: 2015-07-22
+Date: 2015-11-23
 Authors@R: c(person(c("Zhian", "N."), "Kamvar", role = c("cre", "aut"),
     email = "kamvarz@science.oregonstate.edu"))
 Maintainer: Zhian N. Kamvar <kamvarz@science.oregonstate.edu>
