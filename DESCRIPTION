@@ -7,11 +7,19 @@ Authors@R: c(person(c("Zhian", "N."), "Kamvar", role = c("cre", "aut"),
     email = "kamvarz@science.oregonstate.edu"))
 Maintainer: Zhian N. Kamvar <kamvarz@science.oregonstate.edu>
 Encoding: UTF-8
-Description: GenAlEx is a popular Excel macro for genetic analysis. The 'poppr' R package allows import of GenAlEx formatted CSV data. This package serves as a small 'poppr' add on for those who have trouble or simply do not want to export their data into CSV format.
-Depends: poppr (>= 2.0.2)
-Imports: readxl, utils
+Description: GenAlEx is a popular Excel macro for genetic analysis. The 'poppr'
+    R package allows import of GenAlEx formatted CSV data. This package serves as a
+    small 'poppr' add on for those who have trouble or simply do not want to export
+    their data into CSV format.
+Depends:
+    poppr (>= 2.0.2)
+Imports:
+    readxl,
+    utils
 URL: https://github.com/zkamvar/popprxl
 BugReports: https://github.com/zkamvar/popprxl/issues
 License: GPL-3
 LazyData: TRUE
-Suggests: testthat
+Suggests:
+    testthat
+RoxygenNote: 5.0.1
