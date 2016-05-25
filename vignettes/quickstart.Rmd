@@ -1,0 +1,50 @@
+---
+title: "How to use and cite popprxl"
+author: "Zhian N. Kamvar and Niklaus J. Grünwald"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{How to use and cite popprxl}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Citing popprxl
+
+This package is a wrapper for [*poppr*](http://cran.r-project.org/package=poppr)
+and [*readxl*](http://cran.r-project.org/package=readxl). When using this
+package, please cite the *poppr* package:
+
+```{r poppr_citation}
+citation(package = "poppr")
+```
+
+
+# Using popprxl
+
+There is only one function in popprxl: `read.genalexcel()`. This allows you to
+read [GenAlEx](http://biology-assets.anu.edu.au/GenAlEx/Welcome.html) formatted
+excel files in *.xlsx* or *.xls* format.
+
+Here's an example using the `nancycats` data set from the
+[*adegenet*](https://cran.r-project.org/package=adegenet) package.
+
+> Note: The `system.file()` command is a way to access files that come with a
+> package. You will need to supply the path to your own excel file.
+
+```{r load_cats}
+library("popprxl")
+(nancyxlsx <- system.file("files/nancycats.xlsx", package = "popprxl"))
+(nancy    <- read.genalexcel(nancyxlsx))
+```
+
+Because *poppr* is loaded along with *popprxl*, you can use any functions in
+*poppr*:
+
+```{r missing_cats, fig.width = 7, fig.height = 7}
+info_table(nancy, plot = TRUE)
+```
+
+
+
+
