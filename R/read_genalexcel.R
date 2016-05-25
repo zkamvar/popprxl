@@ -38,13 +38,16 @@
 #' @importFrom utils write.table
 read.genalexcel <- function(x, sheet = 1, ...){
 	infile     <- file()
+	on.exit(close(infile))
 	the_call   <- match.call()
 	genalex_df <- readxl::read_excel(x, sheet = sheet, col_names = FALSE)
 	nrows      <- nrow(genalex_df) - 3
-	nsamp      <- as.numeric(genalex_df[1, 2])
+	nsamp      <- suppressWarnings(as.numeric(genalex_df[1, 2]))
 	if (!identical(nrows, nsamp)){
 		if (is.na(nsamp)){
-			stop("Number of samples (Row 1, Column B) is not numeric.")
+			msg <- "Number of samples (Row 1, Column B) is not numeric."
+			msg <- paste(msg, "\n  I found:", genalex_df[1, 2], "\n")
+			stop(msg)
 		} else if (nrows > nsamp){
 			msg        <- "\nI found superfluous rows in data:\n"
 			ndiff      <- nrows - nsamp - 1
@@ -61,7 +64,6 @@ read.genalexcel <- function(x, sheet = 1, ...){
 	utils::write.table(genalex_df, file = infile, sep = ",", quote = FALSE,
 										 row.names = FALSE, col.names = FALSE, na = "")
 	gen_object <- poppr::read.genalex(infile, sep = ",", ...)
-	close(infile)
 	gen_object@call <- the_call
 	return(gen_object)
 }
