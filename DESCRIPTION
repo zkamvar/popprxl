@@ -23,5 +23,8 @@ BugReports: https://github.com/zkamvar/popprxl/issues
 License: GPL-3
 LazyData: TRUE
 Suggests:
-    testthat
+    testthat,
+    knitr,
+    rmarkdown
 RoxygenNote: 5.0.1
+VignetteBuilder: knitr

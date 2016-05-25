@@ -22,7 +22,7 @@ From GitHub:
 
 ``` r
 install.packages("devtools")
-install_github("zkamvar/popprxl")
+install_github("zkamvar/popprxl", build_vignettes = TRUE)
 ```
 
 popprxl has one function: **`read.genalexcel()`**. It can be used to read in GenAlEx data directly from excel:
@@ -42,7 +42,8 @@ library("popprxl")
 #> OMP parallel support: unavailable
 #> 
 #> popprxl is loaded. Use read.genalexcel() to read in your data.
-nancyxlsx <- system.file("files/nancycats.xlsx", package = "popprxl")
+(nancyxlsx <- system.file("files/nancycats.xlsx", package = "popprxl"))
+#> [1] "/Users/zhian/R/popprxl/files/nancycats.xlsx"
 (nancy    <- read.genalexcel(nancyxlsx))
 #> 
 #> This is a genclone object

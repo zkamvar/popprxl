@@ -36,14 +36,14 @@ From GitHub:
 
 ```{r github_install, eval = FALSE}
 install.packages("devtools")
-install_github("zkamvar/popprxl")
+install_github("zkamvar/popprxl", build_vignettes = TRUE)
 ```
 
 popprxl has one function: **`read.genalexcel()`**. It can be used to read in GenAlEx data directly from excel:
 
 ```{r quick_example}
 library("popprxl")
-nancyxlsx <- system.file("files/nancycats.xlsx", package = "popprxl")
+(nancyxlsx <- system.file("files/nancycats.xlsx", package = "popprxl"))
 (nancy    <- read.genalexcel(nancyxlsx))
 ```
 
