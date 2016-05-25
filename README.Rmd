@@ -1,0 +1,49 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# popprxl
+
+[![Build Status](https://travis-ci.org/zkamvar/popprxl.svg?branch=master)](https://travis-ci.org/zkamvar/popprxl)
+[![Coverage Status](https://coveralls.io/repos/zkamvar/popprxl/badge.svg?branch=master&service=github)](https://coveralls.io/github/zkamvar/popprxl?branch=master)
+
+On CRAN:    
+[![Downloads from Rstudio mirror per month](http://cranlogs.r-pkg.org/badges/popprxl)](http://www.r-pkg.org/pkg/popprxl)
+[![Downloads from Rstudio mirror](http://cranlogs.r-pkg.org/badges/grand-total/popprxl)](http://www.r-pkg.org/pkg/popprxl)
+[![CRAN version](http://www.r-pkg.org/badges/version/popprxl)](http://www.r-pkg.org/pkg/popprxl)
+
+A small package that allows import of GenAlEx data directly into poppr from excel.
+
+Setup is simple.
+
+From CRAN:
+
+```{r CRAN_install, eval = FALSE}
+install.packages("popprxl")
+```
+
+From GitHub:
+
+```{r github_install, eval = FALSE}
+install.packages("devtools")
+install_github("zkamvar/popprxl")
+```
+
+popprxl has one function: **`read.genalexcel()`**. It can be used to read in GenAlEx data directly from excel:
+
+```{r quick_example}
+library("popprxl")
+nancyxlsx <- system.file("files/nancycats.xlsx", package = "popprxl")
+(nancy    <- read.genalexcel(nancyxlsx))
+```
+
