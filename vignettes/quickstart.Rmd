@@ -41,7 +41,7 @@ library("popprxl")
 Because *poppr* is loaded along with *popprxl*, you can use any functions in
 *poppr*:
 
-```{r missing_cats, fig.width = 7, fig.height = 7}
+```{r missing_cats, fig.width = 8, fig.height = 5}
 info_table(nancy, plot = TRUE)
 ```
 

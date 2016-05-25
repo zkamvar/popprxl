@@ -1,3 +1,14 @@
+popprxl 0.1.2
+===========
+
+BUG FIX
+
+* An innocuous bug where connections weren't closed if the function ran into an error was fixed
+
+NEW FEATURES
+
+* A quickstart vignette has been added
+
 popprxl 0.1.1
 ===========
 
