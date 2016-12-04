@@ -11,8 +11,8 @@ vignette: >
 
 # Citing popprxl
 
-This package is a wrapper for [*poppr*](http://cran.r-project.org/package=poppr)
-and [*readxl*](http://cran.r-project.org/package=readxl). When using this
+This package is a wrapper for [*poppr*](https://cran.r-project.org/package=poppr)
+and [*readxl*](https://cran.r-project.org/package=readxl). When using this
 package, please cite the *poppr* package:
 
 ```{r poppr_citation}
