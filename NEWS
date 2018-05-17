@@ -1,3 +1,8 @@
+popprxl 0.1.4
+==========
+
+* adegenet has been added to imports (for CRAN maintenance).
+
 popprxl 0.1.3
 ===========
 
