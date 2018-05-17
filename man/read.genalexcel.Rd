@@ -44,10 +44,9 @@ nancy_ex_rows <- system.file("files/nancycats_extra_rows.xlsx", package = "poppr
 read.genalexcel(nancy_ex_cols, sheet = 1, genclone = FALSE)
 }
 }
-\author{
-Zhian N. Kamvar
-}
 \seealso{
 \code{\link[poppr]{read.genalex}}
 }
-
+\author{
+Zhian N. Kamvar
+}
