@@ -1,10 +1,10 @@
 Package: popprxl
 Type: Package
 Title: Read GenAlEx Files Directly from Excel
-Version: 0.1.2
-Date: 2016-05-25
+Version: 0.1.3
+Date: 2018-05-17
 Authors@R: c(person(c("Zhian", "N."), "Kamvar", role = c("cre", "aut"),
-    email = "kamvarz@science.oregonstate.edu"),
+    email = "zkamvar@gmail.com"),
     person(c("Niklaus", "J."), "Grünwald", role = c("ths"),
     email = "grunwaln@science.oregonstate.edu"))
 Maintainer: Zhian N. Kamvar <kamvarz@science.oregonstate.edu>
@@ -25,6 +25,7 @@ LazyData: TRUE
 Suggests:
     testthat,
     knitr,
-    rmarkdown
+    rmarkdown,
+    adegenet
 RoxygenNote: 5.0.1
 VignetteBuilder: knitr
