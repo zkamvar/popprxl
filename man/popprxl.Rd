@@ -3,7 +3,6 @@
 \docType{package}
 \name{popprxl}
 \alias{popprxl}
-\alias{popprxl-package}
 \title{popprxl.}
 \description{
 This package has one function: \code{\link{read.genalexcel}}.

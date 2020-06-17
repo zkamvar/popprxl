@@ -9,7 +9,7 @@
 #' @param x a path to your excel file
 #' @param sheet the sheet in which your data is contained.
 #' @param ... any arguments to be passed on to \code{\link[poppr]{read.genalex}}
-#' @return a \code{\link[poppr]{genclone}} or \code{\link[adegenet]{genind}}
+#' @return a \code{\link[poppr:genclone-class]{genclone}} or \code{\link[adegenet]{genind}}
 #'   object.
 #' @author Zhian N. Kamvar
 #' @seealso \code{\link[poppr]{read.genalex}}

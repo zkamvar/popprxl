@@ -14,7 +14,7 @@ read.genalexcel(x, sheet = 1, ...)
 \item{...}{any arguments to be passed on to \code{\link[poppr]{read.genalex}}}
 }
 \value{
-a \code{\link[poppr]{genclone}} or \code{\link[adegenet]{genind}}
+a \code{\link[poppr:genclone-class]{genclone}} or \code{\link[adegenet]{genind}}
   object.
 }
 \description{
