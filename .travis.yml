@@ -1,16 +1,25 @@
-
 language: r
 r:
   - release
   - devel
 
 sudo: false
-cran: http://cran.at.r-project.org
+cran: https://cran.r-project.org
+warnings_are_errors: true
 
 cache: packages
 
+addons:
+  apt:
+    packages:
+      - libudunits2-dev
+      - libgdal-dev
+
 r_github_packages:
-  - jimhester/covr
+  - r-lib/covr
+
+before_install:
+  - Rscript -e 'update.packages(ask = FALSE)'
 
 after_success:
   - Rscript -e 'library(covr);coveralls()'
@@ -20,6 +29,7 @@ notifications:
     on_success: change
     on_failure: always
 
+
 env:
   global:
     - NOT_CRAN: true
@@ -28,5 +38,3 @@ env:
     - R_CHECK_TIME="TRUE"
     - R_CHECK_TESTS="TRUE"
     - _R_CHECK_TIMINGS_="0"
-
-warnings_are_errors: true
